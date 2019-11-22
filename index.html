@@ -104,61 +104,33 @@ center: [-84.50992, 42.73869], // starting position [lng, lat]
 zoom: 12 // starting zoom
 });   
     
-    map.on('load', function() {
-    map.loadImage('https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Cat_silhouette.svg/400px-Cat_silhouette.svg.png', function(error, image) {
-    if (error) throw error;
-    map.addImage('cat', image);
-    map.addLayer({
-        "id": "points",
-        "type": "symbol",
-        "source": {
-        "type": "geojson",
-        "data": {
-        "type": "FeatureCollection",
-        "features": [{
-        "type": "Feature",
-        "geometry": {
-        "type": "Point",
-        "coordinates": [-84.4598, 42.7206]
-        }
-        }]
-        }
-        },
-        "layout": {
-        "icon-image": "cat",
-        "icon-size": 0.1
-        }
-        });
-        });
-        });
     
-    map.on('load', function() {
-    map.loadImage('https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Cat_silhouette.svg/400px-Cat_silhouette.svg.png', function(error, image) {
-    if (error) throw error;
-    map.addImage('cat', image);
-    map.addLayer({
-        "id": "points",
-        "type": "symbol",
-        "source": {
-        "type": "geojson",
-        "data": {
-        "type": "FeatureCollection",
-        "features": [{
-        "type": "Feature",
-        "geometry": {
-        "type": "Point",
-        "coordinates": [-84.5598, 42.7301]
-        }
-        }]
-        }
-        },
-        "layout": {
-        "icon-image": "cat",
-        "icon-size": 0.1
-        }
-        });
-        });
-        });
+    var geojson = {
+  type: 'FeatureCollection',
+  features: [{
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-84.4598, 42.7206]
+    },
+    properties: {
+      title: 'Mapbox',
+      description: 'Washington, D.C.'
+    }
+  },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.414, 37.776]
+    },
+    properties: {
+      title: 'Mapbox',
+      description: 'San Francisco, California'
+    }
+  }]
+};
+    
  
 </script>
 
