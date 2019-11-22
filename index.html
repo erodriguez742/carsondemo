@@ -102,17 +102,7 @@ container: 'map', // container id
 style: 'mapbox://styles/beyeraut/ck3aba1rc11oq1cqpsc1tp5pi', // stylesheet location
 center: [-84.50992, 42.73869], // starting position [lng, lat]
 zoom: 12 // starting zoom
-});
-</script>
-        <!--
-<script>
-L.mapbox.accessToken = 'pk.eyJ1IjoiYmV5ZXJhdXQiLCJhIjoiY2lnM3hhMGthMjc5NHRqbTNvMmdtbHR4YiJ9.dP5gGJ59Hly_pleCOGkzQw';
-var map = new mapboxgl.Map({
-    container: 'map', //container id
-    style: 'mapbox://styles/beyeraut/ck3aba1rc11oq1cqpsc1tp5pi',//stylesheet location
-    center: [42.73869, -84.50992],//starting posting
-    zom: 14 //starting zoom
-});
+});        
    
 var myLayer = L.mapbox.featureLayer().addTo(mapboxgl);
 var geojson = [
@@ -120,11 +110,11 @@ var geojson = [
     type: 'Feature',
     geometry: {
       type: 'Point',
-      coordinates: [12.477, 41.898]
+      coordinates: [-84.4598, 42.7206]
     },
     properties: {
-      title: 'Pantheon:',
-      description: 'The Pantheon is a former Roman temple, now a church, in Rome, Italy, on the site of an earlier temple commissioned by Marcus Agrippa during the reign of Augustus (27 BC – 14 AD). For more information <a href = "http://www.rome.info/pantheon/">click here.</a>',
+      title: 'Pizza House:',
+      description: 'Description of pizza house pizza. For more information <a href = "http://www.pizzahouse.com/">click here.</a>',
       //image: 'https://farm9.staticflickr.com/8604/15769066303_3e4dcce464_n.jpg',
       icon: {
         iconUrl: 'https://d30y9cdsu7xlg0.cloudfront.net/png/641883-200.png',
