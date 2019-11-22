@@ -7,84 +7,38 @@
     <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js"></script>
     <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css" rel="stylesheet">
     <style>
-        body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; width:100%; }
-        .marker {
-            background-image: url('/img/mapbox-icon.png');
-            background-size: cover;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            cursor: pointer;
-        }
-        .mapboxgl-popup {
-            max-width: 200px;
-        }
-        .mapboxgl-popup-content {
-            text-align: center;
-            font-family: 'Open Sans', sans-serif;
-        }
+        body {
+        margin: 0;
+        padding: 0;
+      }
 
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
     </style>
 </head>
 <body>
 
-<div class="mapboxgl-map" id="map"><div class="mapboxgl-canary" style="visibility: hidden;"></div><div class="mapboxgl-canvas-container mapboxgl-interactive mapboxgl-touch-drag-pan mapboxgl-touch-zoom-rotate"><canvas width="1366" height="655" tabindex="0" class="mapboxgl-canvas" style="width: 1366px; height: 655px; position: absolute;" aria-label="Map"></canvas><div class="marker mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(-50%, -50%) translate(899px, 311px);"></div><div class="marker mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(-50%, -50%) translate(382px, 328px);"></div></div><div class="mapboxgl-control-container"><div class="mapboxgl-ctrl-top-left"></div><div class="mapboxgl-ctrl-top-right"></div><div class="mapboxgl-ctrl-bottom-left"><div class="mapboxgl-ctrl" style="display: block;"><a class="mapboxgl-ctrl-logo" aria-label="Mapbox logo" href="https://www.mapbox.com/" target="_blank" rel="noopener nofollow"></a></div></div><div class="mapboxgl-ctrl-bottom-right"><div class="mapboxgl-ctrl mapboxgl-ctrl-attrib"><div class="mapboxgl-ctrl-attrib-inner"><a href="https://www.mapbox.com/about/maps/" target="_blank">© Mapbox</a> <a href="http://www.openstreetmap.org/about/" target="_blank">© OpenStreetMap</a> <a class="mapbox-improve-map" href="https://apps.mapbox.com/feedback/?owner=mapbox&amp;id=light-v10&amp;access_token=pk.eyJ1IjoiZXhhbXBsZXMiLCJhIjoiY2p0MG01MXRqMW45cjQzb2R6b2ptc3J4MSJ9.zA2W0IkI0c6KaAhJfk9bWg" target="_blank" rel="noopener nofollow">Improve this map</a></div></div></div></div></div>
 
 <script>
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiZXhhbXBsZXMiLCJhIjoiY2p0MG01MXRqMW45cjQzb2R6b2ptc3J4MSJ9.zA2W0IkI0c6KaAhJfk9bWg';
+<div id='map'></div>
 
-var geojson = {
-    "type": "FeatureCollection",
-    "features": [{
-         "type": "Feature",
-         "geometry": {
-             "type": "Point",
-             "coordinates": [-77.032, 38.913]
-         },
-         "properties": {
-             "title": "Mapbox",
-             "description": "Washington, D.C."
-         }
-     },
-     {
-         "type": "Feature",
-         "geometry": {
-         "type": "Point",
-         "coordinates": [-122.414, 37.776]
-        },
-         "properties": {
-             "title": "Mapbox",
-             "description": "San Francisco, California"
-         }
-     }]
-};
+<script>
+
+mapboxgl.accessToken = 'pk.eyJ1IjoiYmV5ZXJhdXQiLCJhIjoiY2lnM3hhMGthMjc5NHRqbTNvMmdtbHR4YiJ9.dP5gGJ59Hly_pleCOGkzQw';
 
 var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/light-v10',
-    center: [-96, 37.8],
-    zoom: 3
+  container: 'map', 
+  style: 'mapbox://styles/beyeraut/ck3aba1rc11oq1cqpsc1tp5pimapbox://styles/mapbox/light-v10',
+  center: [-84.5555, 42.7325],
+  zoom: 12
 });
 
-// add markers to map
-geojson.features.forEach(function(marker) {
-
-    // create a HTML element for each feature
-    var el = document.createElement('div');
-    el.className = 'marker';
-
-    // make a marker for each feature and add it to the map
-    new mapboxgl.Marker(el)
-        .setLngLat(marker.geometry.coordinates)
-        .setPopup(new mapboxgl.Popup({offset: 25}) // add popups
-            .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
-        .addTo(map);
-});
+// code from the next step will go here!
 
 </script>
-
-
-
 </body></html>
