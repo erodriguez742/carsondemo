@@ -203,6 +203,25 @@ var geojson = [
       }
     }
   }, 
+     {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-84.552583, 42.744204] 
+    },
+    properties: {
+      title: 'Detroit Frankies',
+      description: '<b>One Vote</b>: <br>Because I have TASTE <a href = "https://www.facebook.com/Detroit-Frankies-Wood-Fired-Brick-Oven-240664992724260/" target="_blank">click here.</a>',
+      //image: 'img/CHI - Detroit Frankies.jpg',
+      icon: {
+        iconUrl: 'img/pizza.svg',
+        iconSize: [30, 30], // size of the icon
+        iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
+        popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+        className: 'dot'
+      }
+    }
+  }, 
 ];
 // Set a custom icon on each marker based on feature properties.
 myLayer.on('layeradd', function(e) {
