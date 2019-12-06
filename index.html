@@ -222,6 +222,25 @@ var geojson = [
       }
     }
   }, 
+    {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-84.544155, 42.747888] 
+    },
+    properties: {
+      title: 'Cosmos',
+      description: '<b>One Vote</b>: <br>The pizza is pretty ok, but the DUCK FAT FRIES are amazing and they have great cocktails and good popcorn. <a href = "http://www.thecosmoslansing.com/menu" target="_blank">click here.</a>',
+      //image: 'img/CHI - cosmos.jpg',
+      icon: {
+        iconUrl: 'img/pizza.svg',
+        iconSize: [30, 30], // size of the icon
+        iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
+        popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+        className: 'dot'
+      }
+    }
+  }, 
 ];
 // Set a custom icon on each marker based on feature properties.
 myLayer.on('layeradd', function(e) {
