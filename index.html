@@ -250,7 +250,26 @@ var geojson = [
     properties: {
       title: 'Jet\'s Pizza',
       description: '<b>One Vote</b>: <br>Turbo crust. <a href = "https://www.jetspizza.com/" target="_blank">click here.</a>',
-      image: 'img/CHI - cosmos.jpg',
+      image: 'img/CHI - jets pizza.jpg',
+      icon: {
+        iconUrl: 'img/pizza.svg',
+        iconSize: [30, 30], // size of the icon
+        iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
+        popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+        className: 'dot'
+      }
+    }
+  }, 
+     {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-84.548426, 42.689533] 
+    },
+    properties: {
+      title: 'Marco\'s Pizza',
+      description: '<b>One Vote</b>: <br>Because it\'s awesome. <a href = "https://www.marcos.com/" target="_blank">click here.</a>',
+      image: 'img/CHI - marcos.jpg',
       icon: {
         iconUrl: 'img/pizza.svg',
         iconSize: [30, 30], // size of the icon
