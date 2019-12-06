@@ -183,6 +183,25 @@ var geojson = [
         className: 'dot'
       }
     }
+  },
+     {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-84.506912, 42.736835] 
+    },
+    properties: {
+      title: 'Blaze',
+      description: '<b>One Vote</b>: <br>It is fresh and custom made  <a href = "https://www.blazepizza.com/" target="_blank">click here.</a>',
+      //image: 'img/CHI - blazepizza.jpg',
+      icon: {
+        iconUrl: 'img/pizza.svg',
+        iconSize: [30, 30], // size of the icon
+        iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
+        popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+        className: 'dot'
+      }
+    }
   }, 
 ];
 // Set a custom icon on each marker based on feature properties.
