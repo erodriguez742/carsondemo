@@ -43,7 +43,7 @@
     
     <body id="page-top" class="index">
     <!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-bottom navbar-custom">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
@@ -184,25 +184,6 @@ var geojson = [
       }
     }
   }, 
-     {
-    type: 'Feature',
-    geometry: {
-      type: 'Point',
-      coordinates: [-84.506912, 42.736835]
-    },
-    properties: {
-      title: 'Blaze'
-      description: '<b>One Vote</b>: It is fresh and custom made <br> <a href = "https://www.blazepizza.com/" target="_blank">click here.</a>',
-      //image: 'img/CHI - moriartys.jpg',
-      icon: {
-        iconUrl: 'img/pizza.svg',
-        iconSize: [30, 30], // size of the icon
-        iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
-        popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
-        className: 'dot'
-      }
-    }
-  }, 
 ];
 // Set a custom icon on each marker based on feature properties.
 myLayer.on('layeradd', function(e) {
@@ -214,7 +195,9 @@ myLayer.on('layeradd', function(e) {
 });
 myLayer.setGeoJSON(geojson);
 //mapTooltipsJS.scrollWheelZoom.disable();
-    mapTooltipsJS.addControl('bottom-right');
+var nav = new mapboxgl.NavigationControl();
+map.addControl(nav, 'bottom-right');
+
     
     // Add zoom and rotation controls to the map.
 //map.addControl(new mapboxgl.NavigationControl()'bottom-right');
