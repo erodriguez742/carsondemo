@@ -108,6 +108,25 @@ var geojson = [
       }
     }
   },   
+    {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-84.460538, 42.720761] 
+    },
+    properties: {
+      title: 'DiGiornio',
+      description: '<b>One Vote</b>: <br> Cheeeeeeap<br>For more information <a href = "https://www.kroger.com/" target="_blank">click here.</a>',
+      //image: 'img/CHI - pizzaHOUSE.jpg',
+      icon: {
+        iconUrl: 'img/pizza.svg',
+        iconSize: [30, 30], // size of the icon
+        iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
+        popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+        className: 'dot'
+      }
+    }
+  },     
 ];
 // Set a custom icon on each marker based on feature properties.
 myLayer.on('layeradd', function(e) {
