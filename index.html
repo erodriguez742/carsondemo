@@ -305,8 +305,27 @@ var geojson = [
       coordinates: [-84.578721, 42.748823] 
     },
     properties: {
-      title: 'DeLuca\'s Pizza',
+      title: 'DeLuca\'s',
       description: '<b>One Vote</b>: <br>but really, leave Lansing. <a href = "https://delucaspizza.com/" target="_blank">click here.</a>',
+      //image: 'img/CHI - marcos.jpg',
+      icon: {
+        iconUrl: 'img/pizza.svg',
+        iconSize: [30, 30], // size of the icon
+        iconAnchor: [25, 25], // point of the icon which will correspond to marker's location
+        popupAnchor: [0, -25], // point from which the popup should open relative to the iconAnchor
+        className: 'dot'
+      }
+    }
+  }, 
+      {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-84.468174, 42.731384] 
+    },
+    properties: {
+      title: 'Bell\'s Pizza',
+      description: '<b>One Vote</b>: <br>can only eat on payday but when I do, it\'s a good day <a href = "https://thebellspizza.com/" target="_blank">click here.</a>',
       //image: 'img/CHI - marcos.jpg',
       icon: {
         iconUrl: 'img/pizza.svg',
