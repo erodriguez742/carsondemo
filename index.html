@@ -79,7 +79,7 @@
         
     <body>
 <div id='map-tooltips-js' class='map'> </div>
-<script class="mapboxgl-popup-content">
+<script>
 L.mapbox.accessToken = 'pk.eyJ1IjoiYmV5ZXJhdXQiLCJhIjoiY2lnM3hhMGthMjc5NHRqbTNvMmdtbHR4YiJ9.dP5gGJ59Hly_pleCOGkzQw';
 var mapTooltipsJS = L.mapbox.map('map-tooltips-js', 'mapbox.light')
   .setView([42.715046, -84.509800], 12);
@@ -193,7 +193,7 @@ var geojson = [
     },
     properties: {
       title: 'Blaze',
-      description: '<img src="https://image.businessinsider.com/59669a520976db34008b4cd7?width=1100&format=jpeg&auto=webp" width="200"><br><br><b>One Vote</b>: <br>It is fresh and custom made<br>  For more information <a href = "https://www.blazepizza.com/" target="_blank">click here.</a>',
+      description: '<b>One Vote</b>: <br>It is fresh and custom made<br>  For more information <a href = "https://www.blazepizza.com/" target="_blank">click here.</a>',
       //image: 'img/CHI - blazepizza.jpg',
       icon: {
         iconUrl: 'img/pizza.svg',
